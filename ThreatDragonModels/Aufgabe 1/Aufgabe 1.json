@@ -1273,8 +1273,8 @@
                 "height": 80
               },
               "position": {
-                "x": 824,
-                "y": 648
+                "x": 715,
+                "y": 402
               },
               "angle": 0,
               "id": "f75ad3de-fc19-4ab7-a6f9-e65dd5a65797",
@@ -1466,7 +1466,7 @@
                 "height": 80
               },
               "position": {
-                "x": 726,
+                "x": 725,
                 "y": 276
               },
               "angle": 0,
@@ -1589,54 +1589,6 @@
                   "class": "connection hasNoOpenThreats isInScope"
                 }
               }
-            },
-            {
-              "type": "tm.Boundary",
-              "size": {
-                "width": 10,
-                "height": 10
-              },
-              "smooth": true,
-              "source": {
-                "x": 1079,
-                "y": 608
-              },
-              "target": {
-                "x": 1073,
-                "y": 601
-              },
-              "vertices": [
-                {
-                  "x": 793,
-                  "y": 629
-                },
-                {
-                  "x": 796,
-                  "y": 787
-                },
-                {
-                  "x": 1017,
-                  "y": 776
-                }
-              ],
-              "id": "e3673475-cc5c-46f9-b5c0-381459ebdf8f",
-              "z": 46,
-              "labels": [
-                {
-                  "position": {
-                    "distance": 0.3580933975262594,
-                    "offset": 55.1880290349997
-                  },
-                  "attrs": {
-                    "text": {
-                      "text": "Externe Services",
-                      "font-weight": "400",
-                      "font-size": "small"
-                    }
-                  }
-                }
-              ],
-              "attrs": {}
             }
           ]
         },
