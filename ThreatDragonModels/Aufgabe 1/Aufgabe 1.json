@@ -25,16 +25,29 @@
               "angle": 0,
               "id": "6e965c46-8c6d-447c-af07-c45544d52a8a",
               "z": 1,
-              "hasOpenThreats": false,
+              "hasOpenThreats": true,
+              "threats": [
+                {
+                  "ruleId": "b2a6d40d-d3f8-4750-8e4d-c02cc84b13dc",
+                  "title": "Umgehung zweifaktor authentifizierung",
+                  "type": "Elevation of privilege",
+                  "modelType": "STRIDE",
+                  "status": "Open",
+                  "severity": "Medium",
+                  "description": "Bei schlechte Konfiguration kann die zweifaktor Authentifizierung umgangen werden und der Angreifer erhält höhere Rechte.\nMedium , da der nutzen das Anmelderprozesses verloren geht",
+                  "mitigation": "eine Zugriffskontrollliste wird verwendet, um den Zugriff auf Ressourcen zu beschränken",
+                  "threatId": "8ecddb74-3102-450e-a9c7-2643aec52cd5"
+                }
+              ],
               "attrs": {
                 ".element-shape": {
-                  "class": "element-shape hasNoOpenThreats isInScope"
+                  "class": "element-shape hasOpenThreats isInScope"
                 },
                 "text": {
                   "text": "2-Faktor-Authentifizieru\nngsdienst"
                 },
                 ".element-text": {
-                  "class": "element-text hasNoOpenThreats isInScope"
+                  "class": "element-text hasOpenThreats isInScope"
                 }
               }
             },
@@ -55,25 +68,14 @@
               "threats": [
                 {
                   "ruleId": "b2a6d40d-d3f8-4750-8e4d-c02cc84b13dc",
-                  "title": "Daten manipulieren",
-                  "type": "Tampering",
+                  "title": "Spoffing von Telefon",
+                  "type": "Spoofing",
                   "modelType": "STRIDE",
                   "status": "Open",
-                  "severity": "Medium",
-                  "description": "A generic spoofing threat",
-                  "mitigation": "Mitigation or prevention for the threat",
-                  "threatId": "730f303a-e644-44f2-85d1-a9e4c109cb16"
-                },
-                {
-                  "ruleId": "87bc37e2-798e-4d68-bb96-feb1da26da48",
-                  "title": "Generic repudiation threat",
-                  "type": "Repudiation",
-                  "modelType": "STRIDE",
-                  "status": "Open",
-                  "severity": "Medium",
-                  "description": "A generic repudiation threat",
-                  "mitigation": "Mitigation or prevention for the threat",
-                  "threatId": "34295a49-5602-4fa2-99f0-e223b9d69b18"
+                  "severity": "High",
+                  "description": "Spoffing von Benutzer Daten.",
+                  "mitigation": "Paketfilter auf Gateway hinzufügen.\nDadurch werden die eingehende Pakete analysiert  und gegebenenfalls verworfen.",
+                  "threatId": "1d6b4efb-b737-4119-95f0-128f274a2d3d"
                 }
               ],
               "attrs": {
@@ -136,20 +138,9 @@
                   "modelType": "STRIDE",
                   "status": "Open",
                   "severity": "Medium",
-                  "description": "A generic spoofing threat",
-                  "mitigation": "Mitigation or prevention for the threat",
+                  "description": "Fache Identität durch nutzen eine Telefon Nummer eines Anderen.\nMedium, da keine Informationen Preis gegeben werden.",
+                  "mitigation": "Für die Verschlüsselung werden Kryptografische Standard verwenden.",
                   "threatId": "6b6de05e-6d8c-4167-9486-08102632c6de"
-                },
-                {
-                  "ruleId": "87bc37e2-798e-4d68-bb96-feb1da26da48",
-                  "title": "Generic repudiation threat",
-                  "type": "Repudiation",
-                  "modelType": "STRIDE",
-                  "status": "Open",
-                  "severity": "Medium",
-                  "description": "A generic repudiation threat",
-                  "mitigation": "Mitigation or prevention for the threat",
-                  "threatId": "d79fd351-3b57-4c75-9c51-183389521c4e"
                 },
                 {
                   "ruleId": "b2a6d40d-d3f8-4750-8e4d-c02cc84b13dc",
@@ -157,21 +148,10 @@
                   "type": "Elevation of privilege",
                   "modelType": "STRIDE",
                   "status": "Open",
-                  "severity": "High",
-                  "description": "A generic spoofing threat",
-                  "mitigation": "Mitigation or prevention for the threat",
-                  "threatId": "f948abcf-5c55-45bb-874e-30563959c5df"
-                },
-                {
-                  "ruleId": "87bc37e2-798e-4d68-bb96-feb1da26da48",
-                  "title": "Generic repudiation threat",
-                  "type": "Repudiation",
-                  "modelType": "STRIDE",
-                  "status": "Open",
                   "severity": "Medium",
-                  "description": "A generic repudiation threat",
-                  "mitigation": "Mitigation or prevention for the threat",
-                  "threatId": "e1f104a5-a22c-4a89-986a-a4b6b2feccce"
+                  "description": "Service funktioniert fehlerhaft und gewährt fehlerhaft zugriff. \nMedium, da lediglich der Nutzen der Anmeldung verloren geht.",
+                  "mitigation": "eine Zugriffskontrollliste wird verwendet, um den Zugriff auf Ressourcen zu beschränken.",
+                  "threatId": "f948abcf-5c55-45bb-874e-30563959c5df"
                 }
               ],
               "attrs": {
@@ -207,9 +187,9 @@
                   "type": "Denial of service",
                   "modelType": "STRIDE",
                   "status": "Open",
-                  "severity": "High",
-                  "description": "A generic spoofing threat",
-                  "mitigation": "Mitigation or prevention for the threat",
+                  "severity": "Medium",
+                  "description": "mehrfach Wiederholung eines Log-ins, führt zur Überlastung des Log-ins System.\nDa keine Nutzerdaten gefährdet werden, ist die Priorität nur mittel",
+                  "mitigation": "Maximale Bandbereit des Server erhöhen",
                   "threatId": "c0cafabf-b82f-48dc-8c3e-80934296b60e"
                 }
               ],
@@ -258,8 +238,8 @@
                 "height": 80
               },
               "position": {
-                "x": 1281,
-                "y": 110
+                "x": 1283,
+                "y": 109
               },
               "angle": 0,
               "id": "01455916-1256-47b0-b948-f97ca49919c6",
@@ -273,8 +253,8 @@
                   "modelType": "STRIDE",
                   "status": "Open",
                   "severity": "High",
-                  "description": "A generic tampering threat",
-                  "mitigation": "Mitigation or prevention for the threat",
+                  "description": "Daten des Telefonsanbieter können abgefangen werden.\nHigh, da es sich um Nutzer Daten handelt.",
+                  "mitigation": "Paketfilter auf Gateway hinzufügen.\nDadurch werden die eingehende Pakete analysiert  und gegebenenfalls verworfen.",
                   "threatId": "d7cdf29c-f05b-41de-a932-11fbe2c5990c"
                 },
                 {
@@ -284,8 +264,8 @@
                   "modelType": "STRIDE",
                   "status": "Open",
                   "severity": "High",
-                  "description": "A generic repudiation threat",
-                  "mitigation": "Mitigation or prevention for the threat",
+                  "description": "Wenn die Daten gespoofed wird , dann kann der Angreifer diese Manipulieren.\nHigh, da es sich um die Benutzer Daten handelt",
+                  "mitigation": "Keine Sensibel Daten werden unverschlüsselt übertragen.",
                   "threatId": "1a868e17-b91e-40c3-9cab-286b73bfe011"
                 }
               ],
@@ -318,47 +298,14 @@
               "threats": [
                 {
                   "ruleId": "4adaa48a-0345-4533-a189-64c98c4420dd",
-                  "title": "Daten Änderungen",
+                  "title": "Daten abfangen",
                   "type": "Spoofing",
                   "modelType": "STRIDE",
                   "status": "Open",
-                  "severity": "Medium",
-                  "description": "A generic tampering threat",
-                  "mitigation": "Mitigation or prevention for the threat",
+                  "severity": "High",
+                  "description": "abfangen von Daten durch Spoofing.\nHöhere Priorität da das ganze System dadurch beeinflusst werden kann.",
+                  "mitigation": "Paketfilter auf Gateway hinzufügen.\nDadurch werden die eingehende Pakete analysiert  und gegebenenfalls verworfen.",
                   "threatId": "6b273ae2-2afc-44c4-892e-4527e750568b"
-                },
-                {
-                  "ruleId": "87bc37e2-798e-4d68-bb96-feb1da26da48",
-                  "title": "Generic repudiation threat",
-                  "type": "Repudiation",
-                  "modelType": "STRIDE",
-                  "status": "Open",
-                  "severity": "Medium",
-                  "description": "A generic repudiation threat",
-                  "mitigation": "Mitigation or prevention for the threat",
-                  "threatId": "63673ad8-3754-46ea-92cb-1af7b140f6e5"
-                },
-                {
-                  "ruleId": "13000296-b17d-4b72-9cc4-f5cc33f80e4c",
-                  "title": "Generic information disclosure threat",
-                  "type": "Information disclosure",
-                  "modelType": "STRIDE",
-                  "status": "Open",
-                  "severity": "Medium",
-                  "description": "A generic information disclosure threat",
-                  "mitigation": "Mitigation or prevention for the threat",
-                  "threatId": "b6976938-9b42-4f62-a181-a9db40ba8445"
-                },
-                {
-                  "ruleId": "edb05d76-a695-455f-947b-7d67b78bc31d",
-                  "title": "Generic DoS threat",
-                  "type": "Denial of service",
-                  "modelType": "STRIDE",
-                  "status": "Open",
-                  "severity": "Medium",
-                  "description": "A generic DoS threat",
-                  "mitigation": "Mitigation or prevention for the threat",
-                  "threatId": "42dceb59-f39d-43e6-931d-c5a784d42e3c"
                 }
               ],
               "attrs": {
@@ -454,6 +401,14 @@
                 {
                   "x": 622,
                   "y": 34
+                },
+                {
+                  "x": 477,
+                  "y": 29
+                },
+                {
+                  "x": 451,
+                  "y": 27
                 },
                 {
                   "x": 409,
@@ -1149,6 +1104,10 @@
               },
               "vertices": [
                 {
+                  "x": 1019,
+                  "y": 147
+                },
+                {
                   "x": 968,
                   "y": 137
                 },
@@ -1507,7 +1466,7 @@
                 "height": 80
               },
               "position": {
-                "x": 724,
+                "x": 726,
                 "y": 276
               },
               "angle": 0,
@@ -1522,20 +1481,9 @@
                   "modelType": "STRIDE",
                   "status": "Open",
                   "severity": "High",
-                  "description": "A generic spoofing threat",
-                  "mitigation": "Mitigation or prevention for the threat",
+                  "description": "Informationen des Monatlichen Management Report können abgefangen werden und vom Angreifer benutzt werden. \nHigh, da auch Nutzer Daten abgefangen werden können, wenn diese in den Report protokoliert werden",
+                  "mitigation": "Paketfilter auf Gateway hinzufügen.\nDadurch werden die eingehende Pakete analysiert  und gegebenenfalls verworfen.",
                   "threatId": "7db0dc0b-2c34-4848-849b-4c33b38ebfd2"
-                },
-                {
-                  "ruleId": "87bc37e2-798e-4d68-bb96-feb1da26da48",
-                  "title": "Generic repudiation threat",
-                  "type": "Repudiation",
-                  "modelType": "STRIDE",
-                  "status": "Open",
-                  "severity": "Medium",
-                  "description": "A generic repudiation threat",
-                  "mitigation": "Mitigation or prevention for the threat",
-                  "threatId": "e12c483e-3205-4735-bcf4-d4e653d86a6b"
                 },
                 {
                   "ruleId": "b2a6d40d-d3f8-4750-8e4d-c02cc84b13dc",
@@ -1543,21 +1491,10 @@
                   "type": "Information disclosure",
                   "modelType": "STRIDE",
                   "status": "Open",
-                  "severity": "Medium",
-                  "description": "A generic spoofing threat",
-                  "mitigation": "Mitigation or prevention for the threat",
+                  "severity": "High",
+                  "description": "Wenn Log-in Daten gelogt werden, kann es zur Problemen kommen.\nHigh, weil die Log-in Daten abgefangen können, und augenutzt werden können .",
+                  "mitigation": "Filterung der Übertagung der Daten. Daten werden entcodiert",
                   "threatId": "3b8cba80-e439-4c15-8d0e-af1f51856e66"
-                },
-                {
-                  "ruleId": "87bc37e2-798e-4d68-bb96-feb1da26da48",
-                  "title": "Generic repudiation threat",
-                  "type": "Repudiation",
-                  "modelType": "STRIDE",
-                  "status": "Open",
-                  "severity": "Medium",
-                  "description": "A generic repudiation threat",
-                  "mitigation": "Mitigation or prevention for the threat",
-                  "threatId": "cebb0901-b45c-4506-a8e2-4cac733498c8"
                 }
               ],
               "attrs": {
